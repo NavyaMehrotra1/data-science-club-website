@@ -19,3 +19,7 @@ function createParticles() {
     })
   }
 }
+
+setInterval(createParticles, 2000); // create particles every 2 seconds
+createParticles(); // initial 
+
