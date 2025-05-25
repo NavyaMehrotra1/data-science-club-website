@@ -59,4 +59,34 @@ canvas {
   display: block;
 }
 
+.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #111;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      justify-content: flex-end;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: #4bc5bc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-family: 'Fira Code', monospace;
+      align-items: center;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
 
