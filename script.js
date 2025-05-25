@@ -32,7 +32,7 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
     const emailInput = document.querySelector('input[type="email"]');
     
     // Validate JHU email
-    if (!emailInput.value.endsWith('@jhu.edu')) {
+    if (!emailInput.value.endsWith('@jh.edu')) {
         statusMessage.textContent = 'Please use your JHU email address (@jhu.edu)';
         statusMessage.className = 'status-message error';
         return;
@@ -61,7 +61,7 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
             this.reset();
             statusMessage.className = 'status-message';
             statusMessage.textContent = '';
-            submitBtn.textContent = 'Deploy Application';
+            submitBtn.textContent = 'Submit';
             submitBtn.disabled = false;
             submitBtn.style.background = 'linear-gradient(135deg, #ff6b9d, #c44569)';
         }, 3000);

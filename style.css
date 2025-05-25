@@ -65,7 +65,7 @@ body {
 .nav {
   display: flex; 
   justify-content: space-between;
-  align-items: center;
+  align-items:flex-end;
 }
 
  .logo {
@@ -79,6 +79,7 @@ body {
     display: flex; 
     gap: 30px; 
     list-style: none;
+    align-items: flex-end;
  }
 
  .nav-links a{
@@ -157,36 +158,13 @@ canvas {
   display: block;
 }
 
-.navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background-color: #111;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      justify-content: flex-end;
-    }
-
-    
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .nav-links a {
-      color: #4bc5bc;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      font-family: 'Fira Code', monospace;
-      align-items: center;
-    }
-
-    .nav-links a:hover {
-      color: #ffffff;
-    }
+.container {
+  display: flex;
+  min-height: 100vh;
+  padding-top: 80px;
+  position: relative;
+  z-index: 10;
+}
 
 .left-section{
   flex: 1; 
@@ -208,6 +186,67 @@ canvas {
   margin-bottom: 20px;
   text-shadow: 0 0 30px rgba(255, 107, 157, 0.3);
 }
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: #b0b0b0;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: slideUp 1s ease-out 0.5s forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.features {
+    list-style: none;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: slideUp 1s ease-out forwards;
+    transition: all 0.3s ease;
+}
+
+.feature:nth-child(1) { animation-delay: 0.8s; }
+.feature:nth-child(2) { animation-delay: 1s; }
+.feature:nth-child(3) { animation-delay: 1.2s; }
+.feature:nth-child(4) { animation-delay: 1.4s; }
+
+.feature:hover {
+    transform: translateX(10px);
+    color: #ff6b9d;
+}
+
+.feature::before {
+    content: '▶';
+    color: #ff6b9d;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+}
+
+.feature:hover::before {
+    color: #c44569;
+    transform: scale(1.2);
+}
+
 
 .right-section {
   flex: 1; 
