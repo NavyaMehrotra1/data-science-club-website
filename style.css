@@ -80,10 +80,10 @@ body {
 
 .nav {
   display: flex; 
-    justify-content: space-between; /* This pushes logo left, nav-links right */
-    align-items: center; /* Changed from flex-end to center for better alignment */
-    max-width: 1200px; /* Optional: limit max width */
-    margin: 0 auto; /* Optional: center the nav content */
+    justify-content: space-between; 
+    align-items: right; 
+    max-width: 1200px; 
+    margin: 0 auto; 
     width: 100%;
     height: auto; 
 }
@@ -96,10 +96,10 @@ body {
  }
 
  .nav-links {
-     display: flex; 
+    display: flex; 
     gap: 30px; 
     list-style: none;
-    align-items: center; 
+    align-items: right; 
     margin: 0; 
     padding: 0; 
  }
@@ -111,7 +111,7 @@ body {
     position: relative;
     padding: 0.5rem 1rem; 
     white-space: nowrap;
-
+    box-align: right; 
  }
 
  .nav-links a:hover {
@@ -123,10 +123,10 @@ body {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px; /* Add height to make the underline visible */
+    height: 2px; 
     bottom: -5px;
-    left: 50%; /* Center the underline */
-    transform: translateX(-50%); /* Center the underline */
+    left: 50%; 
+    transform: translateX(-50%); 
     background: linear-gradient(90deg, #ff6b9d, #c44569); 
     transition: width 0.3s ease; 
   }
