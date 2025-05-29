@@ -4,6 +4,21 @@
   box-sizing: border-box
 }
 
+header {
+    position: fixed;
+    right: 0; 
+    left:0; 
+    top: 0;
+    width: 100%;
+    height: auto; 
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* optional shadow */
+    align-self: flex-end;
+    background: rgba(26, 0, 51, 0.95); 
+    backdrop-filter: blur(10px); 
+    padding: 1rem 2rem; 
+}
+
 body {
     background: linear-gradient(135deg, #1a0033 0%, #330066 50%, #4d0099 100%); 
     font-family: 'Courier New', monospace;
@@ -59,14 +74,18 @@ body {
     font-size: 1 rem;
     color: #ffffff;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-family: 'Fira Code', monospace;
 }
 
 .nav {
   display: flex; 
-  justify-content: space-between;
-  align-items:flex-end;
+    justify-content: space-between; /* This pushes logo left, nav-links right */
+    align-items: center; /* Changed from flex-end to center for better alignment */
+    max-width: 1200px; /* Optional: limit max width */
+    margin: 0 auto; /* Optional: center the nav content */
+    width: 100%;
+    height: auto; 
 }
 
  .logo {
@@ -77,17 +96,22 @@ body {
  }
 
  .nav-links {
-    display: flex; 
+     display: flex; 
     gap: 30px; 
     list-style: none;
-    align-items: flex-end;
+    align-items: center; 
+    margin: 0; 
+    padding: 0; 
  }
 
  .nav-links a{
-  color: #ffffff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 1rem; 
+    white-space: nowrap;
+
  }
 
  .nav-links a:hover {
@@ -96,13 +120,15 @@ body {
  }
 
   .nav-links a::after {
-      content: '';
-      position: absolute;
-      width: 0; 
-      bottom: -5px;
-      left: 0;
-      background: linear-gradient(90deg, #ff6b9d, #c44569); 
-      transition: width 0.3s ease; 
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; /* Add height to make the underline visible */
+    bottom: -5px;
+    left: 50%; /* Center the underline */
+    transform: translateX(-50%); /* Center the underline */
+    background: linear-gradient(90deg, #ff6b9d, #c44569); 
+    transition: width 0.3s ease; 
   }
 
    .nav-links a:hover::after {
@@ -162,9 +188,10 @@ canvas {
 .container {
   display: flex;
   min-height: 100vh;
-  padding-top: 80px;
   position: relative;
   z-index: 10;
+  padding-top: 10px; 
+
 }
 
 .left-section{
