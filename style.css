@@ -654,22 +654,32 @@ canvas {
 }
 
 .carousel-container {
-  padding: 10px; 
-  overflow-x: hidden;
-  height: 300px; 
-  width: 100%; 
+  overflow-x: auto;         /* Enables horizontal scroll */
+  overflow-y: hidden;
+  width: 100%;
+  padding: 1rem;
+  scroll-behavior: smooth;
+  white-space: nowrap;   
+  scroll-snap-type: x mandatory; /* Enables snap scrolling */ 
 }
-
 
 .carousel-track {
-  display: flex;
-  gap: 5rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 1rem;
-  width: 100%; 
+  display: inline-flex;     /* Align children in a horizontal row */
+  gap: 2rem;                /* Space between boxes */
 }
+
+.carousel-item {
+  flex: 0 0 auto;           /* Prevent shrinking/wrapping */
+  width: 480px;             /* Adjust based on your design */
+  border-radius: 20px;
+  padding: 1rem;
+  color: white;
+  scroll-snap-align: start;
+  display: inline-flex; 
+}
+
+
+
 
 
 

@@ -1,148 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Science Club</title>
-    <meta name = "description" content="Data Science Club at Johns Hopkins University">
-    <link href = "style.css" rel = "stylesheet">
+    <meta name="description" content="Data Science Club at Johns Hopkins University">
+    <link href="style.css" rel="stylesheet">
     <script type="module" src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
 
 </head>
+
 <body>
     <!-- background -->
-    <div class = "particles" id = "particles"></div>
+    <div class="particles" id="particles"></div>
 
-    
+
 
     <header>
         <!-- Navigation Bar-->
-        <nav class = "nav">
-            <ul class = "nav-links">
-                <li><a href = "#home">Home</a></li>
-                <li><a href = "#projects">Projects</a></li>
-                <li><a href = "#events">Events</a></li>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#events">Events</a></li>
                 <li><a href="#team">Team</a></li>
-                <li><a href = "#contact">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        
-        
+
+
         <!-- Main Heading -->
-        
-        <h1 class = "main-heading">Data Science Club at Johns Hopkins University</h1>
+        <h1 class="main-heading">Data Science Club at Johns Hopkins University</h1>
+
     </header>
+
     <!-- About Section -->
-    <div class = "container">
-    <div class = "left-section">
-        <div class = "card"> 
-            <h2 class = "feature">What is the Data Science Club?</h2>
-            <p class = "feature">The Data Science Club is JHU's premier student-led project based data science initiative to teach, explore and build with data.</p>
+    <div class="container">
+        <div class="left-section">
+            <div class="card">
+                <h2 class="feature">What is the Data Science Club?</h2>
+                <p class="feature">The Data Science Club is JHU's premier student-led project based data science
+                    initiative to teach, explore and build with data.</p>
+            </div>
+            <br>
+            <div class="card">
+                <h2 class="feature">What do we do?</h2>
+                <p class="feature"> 🎯 Themed Semesters: Each semester focuses on a theme like Data Science in Medicine
+                    or Finance.</p>
+
+                <p class="feature">🚀 Kickoff Workshops: We start with workshops tailored to the theme to build relevant
+                    technical skills.</p>
+
+                <p class="feature">💡 Project-Based Learning: Members collaborate on hands-on projects applying what
+                    they’ve learned.</p>
+
+                <p class="feature">📚 Data Science 101: At the start of each semester, we offer beginner-friendly
+                    workshops for those new to data science.</p>
+            </div>
         </div>
-        <br>
-        <div class = "card">
-            <h2 class = "feature">What do we do?</h2>
-            <p class = "feature"> 🎯 Themed Semesters: Each semester focuses on a theme like Data Science in Medicine or Finance.</p>
+        <div class="right-section">
+            <div class="form-container">
+                <h2 class="form-title">JOIN THE DATA SCIENCE CLUB</h2>
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-input" placeholder="Enter your full name" required>
+                    </div>
 
-            <p class = "feature">🚀 Kickoff Workshops: We start with workshops tailored to the theme to build relevant technical skills.</p>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="email" class="form-input" placeholder="student@jh.edu"
+                            pattern=".*jh\.edu" title="Please use your JHU email address" required>
+                    </div>
 
-            <p class = "feature">💡 Project-Based Learning: Members collaborate on hands-on projects applying what they’ve learned.</p>
-
-            <p class = "feature">📚 Data Science 101: At the start of each semester, we offer beginner-friendly workshops for those new to data science.</p>
+                    <button type="submit" class="submit-btn">Join Now!</button>
+                    <div class="status-message" id="statusMessage">
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
-    <div class = "right-section"> 
-        <div class = "form-container"> 
-            <h2 class = "form-title">JOIN THE DATA SCIENCE CLUB</h2>
-            <form id = "signupForm"> 
-                <div class = "form-group">
-                    <label class = "form-label">Full Name</label>
-                    <input type = "text" class = "form-input" placeholder = "Enter your full name" required> 
-                </div>
-
-                <div class = "form-group">
-                    <label class = "form-label">Email</label>
-                    <input type = "email" name = "email" class = "form-input" placeholder = "student@jh.edu" pattern = ".*jh\.edu" title = "Please use your JHU email address" required>
-                </div>
-
-                <button type = "submit" class = "submit-btn">Join Now!</button>
-                <div class = "status-message" id = "statusMessage">
-                </div>
-            </form>
-        </div>
-    </div>
     </div>
 
 
     <!-- Upcoming Events -->
-    <div class = "carousel-container">
-        <h1 class = "main-heading">Upcoming Events</h1>
-        <div class = "carousel-track">
-            <div class = "card">
+    <div class="carousel-container">
+        <h1 class="main-heading">Upcoming Events</h1>
+        <div class="carousel-track">
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-date">
+                            <div class="card-day">20</div>
+                            <div class="card-month">March</div>
+                        </div>
+
+                        <div class="card-info">
+                            <div class="card-time">5:00 PM – 6:00 PM</div>
+                            <div class="card-location">Malone Hall</div>
+                            <div class="card-description">Some event description</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="card">
                 <div class="card-content">
                     <div class="card-date">
-                    <div class="card-day">20</div>
-                    <div class="card-month">March</div>
+                        <div class="card-day">20</div>
+                        <div class="card-month">March</div>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="card-time">5:00 PM – 6:00 PM</div>
+                        <div class="card-location">Malone Hall</div>
+                        <div class="card-description">Some event description</div>
+                    </div>
                 </div>
 
-                <div class="card-info">
-                    <div class="card-time">5:00 PM – 6:00 PM</div>
-                    <div class="card-location">Malone Hall</div>
-                    <div class="card-description">Some event description</div>
-                </div>
             </div>
-
         </div>
-                
+
+        <div class="carousel-item">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-date">
+                        <div class="card-day">20</div>
+                        <div class="card-month">March</div>
+                    </div>
+
+                    <div class="card-info">
+                        <div class="card-time">5:00 PM – 6:00 PM</div>
+                        <div class="card-location">Malone Hall</div>
+                        <div class="card-description">Some event description</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
-            <div class = "card">
-                <div class="card-content">
-                    <div class="card-date">
-                        <div class="card-day">20</div>
-                        <div class="card-month">March</div>
-                    </div>
-
-                    <div class="card-info">
-                        <div class="card-time">5:00 PM – 6:00 PM</div>
-                        <div class="card-location">Malone Hall</div>
-                        <div class="card-description">Some event description</div>
-                    </div>
-                    </div>
-
-            </div>
-            <div class = "card">
-                <div class="card-content">
-                    <div class="card-date">
-                        <div class="card-day">20</div>
-                        <div class="card-month">March</div>
-                    </div>
-
-                    <div class="card-info">
-                        <div class="card-time">5:00 PM – 6:00 PM</div>
-                        <div class="card-location">Malone Hall</div>
-                        <div class="card-description">Some event description</div>
-                    </div>
-                    </div>
-
-            </div>
-        </div>
     </div>
 
 
     <!-- Become a sponsor -->
-    <div class = "card">
+    <div class="card">
         <h2>Become a sponsor</h2>
     </div>
 
     <!-- FAQs -->
 
     <!--Footer-->
-    <footer class = "footer">
-        <div class = "footer-container">
-        
+    <footer class="footer">
+        <div class="footer-container">
+
             <p>Follow us on:</p>
             <!-- Social Media -->
             <div class="social-links">
@@ -157,13 +175,14 @@
                 </a>
             </div>
 
-             <div class="footer-bottom">
-            <p>&copy; 2025 Data Science Club at Johns Hopkins University. 
-            Made with ❤️ by Navya Mehrotra</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Data Science Club at Johns Hopkins University.
+                    Made with ❤️ by Navya Mehrotra</p>
             </div>
         </div>
-        
+
         <!-- Contact -->
     </footer>
 </body>
+
 </html>
