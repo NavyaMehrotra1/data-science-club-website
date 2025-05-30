@@ -593,8 +593,10 @@ canvas {
 }
 
 .carousel-container {
-  padding: 2rem;
+  padding: 10px; 
   overflow-x: hidden;
+  height: 300px; 
+  width: 100%; 
 }
 
 
