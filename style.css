@@ -592,5 +592,25 @@ canvas {
     text-shadow: 0 0 5px rgba(255, 107, 157, 0.5);
 }
 
+.carousel-container {
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+
+.carousel-track {
+  display: flex;
+  gap: 5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+  width: 100%; 
+}
+
+
+
+
+
 
 
