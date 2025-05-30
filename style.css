@@ -16,6 +16,7 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* optional shadow */
     align-self: flex-end;
     background: rgba(26, 0, 51, 0.95); 
+    
     backdrop-filter: blur(10px); 
     padding: 1rem 2rem; 
 }
@@ -163,6 +164,62 @@ body {
     color: #cccccc;
     line-height: 1.6;
 }
+
+.card-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center; /* Aligns date and info vertically */
+    color: #fff;
+    padding: 1rem;
+    background-color: #1a0033;
+    border-radius: 1rem;
+}
+
+.card-date {
+    flex-shrink: 0;
+    text-align: center;
+    color: #ffd700;
+    font-weight: bold;
+    font-family: 'Ubuntu Mono', monospace;
+    line-height: 1;
+}
+
+.card-day {
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.card-month {
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-family: 'Ubuntu Mono', monospace;
+    color: #ccc;
+    font-size: 1rem;
+}
+
+.card-time {
+    color: #ccc;
+}
+
+.card-location {
+    color: #aaa;
+}
+
+.card-description {
+    color: #ccc;
+}
+
+.card a {
+    color: #ccc;
+    text-decoration: underline;
+}
+
 
 .register-btn {
   padding: 0.75rem 1.5rem;
@@ -614,9 +671,6 @@ canvas {
   width: 100%; 
 }
 
-.event_card {
-
-}
 
 
 
