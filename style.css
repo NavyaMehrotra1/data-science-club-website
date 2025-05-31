@@ -23,8 +23,8 @@ header {
 }
 
 body {
-    background: linear-gradient(135deg, #1a0033 0%, #330066 50%, #4d0099 100%); 
-    /* background: black; */ 
+    background: linear-gradient(135deg, #1a0033 0%, #330066 50%, #4d0099 100%);
+    /* background: black; */
     font-family: 'Courier New', monospace;
     display: flex;
     flex-direction: column;
@@ -119,7 +119,7 @@ body {
     position: relative;
     padding: 0.5rem 1rem;
     white-space: nowrap;
-    
+
 }
 
 .nav-links a:hover {
@@ -704,7 +704,7 @@ canvas {
     align-items: start;
     max-width: 1200px;
     padding-left: 10px;
-    padding-right: 10px; 
+    padding-right: 10px;
 }
 
 .team-image {
@@ -741,7 +741,7 @@ canvas {
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 8px;
-    align-items: center; 
+    align-items: center;
 }
 
 .team-position {
@@ -789,3 +789,202 @@ canvas {
     width: 18px;
     height: 18px;
 }
+
+.faq-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            backdrop-filter: blur(20px);
+            border-radius: 0;
+            padding: 50px 40px;
+            position: relative;
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .faq-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            transition: left 0.5s ease;
+        }
+
+        .faq-container:hover::before {
+            left: 100%;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff6b9d, #c44569, #ff9ff3);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(255, 107, 157, 0.3);
+        }
+
+
+        .faq-header p {
+            color: #b0b0b0;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .search-box {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 20px 25px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid rgba(255, 107, 157, 0.4);
+            border-radius: 0;
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-family: 'Fira Code', monospace;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: #ff6b9d;
+            box-shadow: 0 0 20px rgba(255, 107, 157, 0.4);
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .faq-item {
+            border: 2px solid rgba(255, 107, 157, 0.2);
+            border-radius: 0;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+            clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+        }
+
+        .faq-item:hover {
+            border-color: rgba(255, 107, 157, 0.6);
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .faq-item.active {
+            border-color: #ff6b9d;
+            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.3);
+            background: rgba(26, 0, 51, 0.95);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(255, 107, 157, 0.05)); 
+            backdrop-filter: grade(100px);
+            text-box-edge: round;
+        }
+
+        .faq-question::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            transition: left 0.5s ease;
+        }
+
+        .faq-question:hover::before {
+            left: 100%;
+        }
+
+        .faq-question h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 0;
+            flex: 1;
+            padding-right: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .faq-question:hover h3 {
+            color: #ff6b9d;
+            text-shadow: 0 0 10px rgba(255, 107, 157, 0.5);
+        }
+
+        .faq-item.active .faq-question h3 {
+            color: #ff6b9d;
+            text-shadow: 0 0 10px rgba(255, 107, 157, 0.5);
+        }
+
+        .faq-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 107, 157, 0.2);
+            border: 2px solid rgba(255, 107, 157, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff6b9d;
+            clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            background: rgba(255, 107, 157, 0.3);
+            border-color: #ff6b9d;
+            box-shadow: 0 0 15px rgba(255, 107, 157, 0.5);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            background: rgba(13, 0, 26, 0.6);
+            backdrop-filter: blur(10px);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 400px;
+            padding: 30px;
+        }
+
+        .faq-answer p {
+            color: #cccccc;
+            line-height: 1.8;
+            font-size: 1rem;
+            font-family: 'Fira Code', monospace;
+            margin: 0;
+        }
