@@ -494,13 +494,15 @@ canvas {
 .footer {
     background: linear-gradient(135deg, #1a0033 0%, #330066 50%, #4d0099 100%);
     color: #ffffff;
-    padding: 40px 0;
+    padding: 60px 40px;
     margin-top: 60px;
     border-top: 2px solid #ff6b9d;
     position: relative;
     font-family: 'Inter', 'Segoe UI', sans-serif;
-    width: 100%;
     min-height: auto;
+    width: 100vw; /* full viewport width */
+    margin-left: calc(-50vw + 50%); /* centers it while breaking out of container */
+    padding: 60px calc((100vw - 1080px) / 2); /* maintains content alignment */
 }
 
 .footer::before {
