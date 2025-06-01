@@ -671,7 +671,7 @@ canvas {
     /* Enables horizontal scroll */
     overflow-y: hidden;
     width: 100%;
-    padding: 1rem;
+    padding: 0.9rem;
     scroll-behavior: smooth;
     white-space: nowrap;
     scroll-snap-type: x mandatory;
@@ -688,7 +688,7 @@ canvas {
 .carousel-item {
     flex: 0 0 auto;
     /* Prevent shrinking/wrapping */
-    width: 480px;
+    width: 450px;
     /* Adjust based on your design */
     border-radius: 20px;
     padding: 1rem;
@@ -990,3 +990,33 @@ canvas {
             font-family: 'Fira Code', monospace;
             margin: 0;
         }
+
+
+.page-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 107, 157, 0.5);
+    font-family: 'Fira Code', monospace;
+}
+
+.page h2 {
+    font-size: 1.5rem;
+    color: #ff6b9d;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.regular-events p {
+    color: #cccccc;
+    line-height: 1.6;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(255, 107, 157, 0.1);
+    align-self: center;
+}
