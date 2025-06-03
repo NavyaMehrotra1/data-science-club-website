@@ -169,7 +169,7 @@ body {
 .card p {
     color: #cccccc;
     line-height: 1.6;
-    white-space: normal;   
+    white-space: normal;
     word-wrap: break-word;
 }
 
@@ -191,7 +191,7 @@ body {
     padding: 1rem;
     background-color: #1a0033;
     border-radius: 1rem;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .card-title {
@@ -517,15 +517,13 @@ canvas {
 .footer {
     background: linear-gradient(135deg, #1a0033 0%, #330066 50%, #4d0099 100%);
     color: #ffffff;
-    padding: 60px 40px;
     margin-top: 60px;
     border-top: 2px solid #ff6b9d;
     position: relative;
     font-family: 'Inter', 'Segoe UI', sans-serif;
-    min-height: auto;
-    width: 100vw; /* full viewport width */
-    margin-left: calc(-50vw + 50%); /* centers it while breaking out of container */
-    padding: 60px calc((100vw - 1080px) / 2); /* maintains content alignment */
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 60px 0;
 }
 
 .footer::before {
@@ -542,21 +540,18 @@ canvas {
 }
 
 @keyframes gradientShift {
-
-    0%,
-    100% {
+    0%, 100% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
 }
 
 .footer-container {
-    max-width: none;
-    margin: 0;
-    padding: 0 40px;
+    max-width: 3456px; /* Set a max-width for content */
+    margin: 0 auto; /* Center the container */
+    padding: 0 40px; /* Add padding here instead */
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 60px;
@@ -564,7 +559,6 @@ canvas {
     z-index: 2;
     align-items: start;
 }
-
 .footer-section h3 {
     color: #ff6b9d;
     font-size: 1.1rem;
@@ -816,203 +810,203 @@ canvas {
 }
 
 .faq-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            backdrop-filter: blur(20px);
-            border-radius: 0;
-            padding: 50px 40px;
-            position: relative;
-            overflow: hidden;
-            z-index: 10;
-        }
+    max-width: 1000px;
+    margin: 0 auto;
+    backdrop-filter: blur(20px);
+    border-radius: 0;
+    padding: 50px 40px;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
 
-        .faq-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            transition: left 0.5s ease;
-        }
+.faq-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: left 0.5s ease;
+}
 
-        .faq-container:hover::before {
-            left: 100%;
-        }
+.faq-container:hover::before {
+    left: 100%;
+}
 
-        .faq-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+.faq-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-        .faq-header h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, #ff6b9d, #c44569, #ff9ff3);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 20px;
-            text-shadow: 0 0 30px rgba(255, 107, 157, 0.3);
-        }
+.faq-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff6b9d, #c44569, #ff9ff3);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    text-shadow: 0 0 30px rgba(255, 107, 157, 0.3);
+}
 
 
-        .faq-header p {
-            color: #b0b0b0;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+.faq-header p {
+    color: #b0b0b0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
-        .search-box {
-            margin-bottom: 40px;
-            position: relative;
-        }
+.search-box {
+    margin-bottom: 40px;
+    position: relative;
+}
 
-        .search-input {
-            width: 100%;
-            padding: 20px 25px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 2px solid rgba(255, 107, 157, 0.4);
-            border-radius: 0;
-            color: #ffffff;
-            font-size: 1.1rem;
-            font-family: 'Fira Code', monospace;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
-            outline: none;
-        }
+.search-input {
+    width: 100%;
+    padding: 20px 25px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 107, 157, 0.4);
+    border-radius: 0;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-family: 'Fira Code', monospace;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    outline: none;
+}
 
-        .search-input:focus {
-            border-color: #ff6b9d;
-            box-shadow: 0 0 20px rgba(255, 107, 157, 0.4);
-            transform: translateY(-2px);
-            background: rgba(255, 255, 255, 0.12);
-        }
+.search-input:focus {
+    border-color: #ff6b9d;
+    box-shadow: 0 0 20px rgba(255, 107, 157, 0.4);
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.12);
+}
 
-        .search-input::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
 
-        .faq-item {
-            border: 2px solid rgba(255, 107, 157, 0.2);
-            border-radius: 0;
-            margin-bottom: 20px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            position: relative;
-            clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
-        }
+.faq-item {
+    border: 2px solid rgba(255, 107, 157, 0.2);
+    border-radius: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+}
 
-        .faq-item:hover {
-            border-color: rgba(255, 107, 157, 0.6);
-            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.2);
-            transform: translateY(-3px);
-        }
+.faq-item:hover {
+    border-color: rgba(255, 107, 157, 0.6);
+    box-shadow: 0 10px 30px rgba(255, 107, 157, 0.2);
+    transform: translateY(-3px);
+}
 
-        .faq-item.active {
-            border-color: #ff6b9d;
-            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.3);
-            background: rgba(26, 0, 51, 0.95);
-        }
+.faq-item.active {
+    border-color: #ff6b9d;
+    box-shadow: 0 15px 40px rgba(255, 107, 157, 0.3);
+    background: rgba(26, 0, 51, 0.95);
+}
 
-        .faq-question {
-            padding: 25px 30px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: transparent;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(255, 107, 157, 0.05)); 
-            backdrop-filter: grade(100px);
-            text-box-edge: round;
-        }
+.faq-question {
+    padding: 25px 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(255, 107, 157, 0.05));
+    backdrop-filter: grade(100px);
+    text-box-edge: round;
+}
 
-        .faq-question::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            transition: left 0.5s ease;
-        }
+.faq-question::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: left 0.5s ease;
+}
 
-        .faq-question:hover::before {
-            left: 100%;
-        }
+.faq-question:hover::before {
+    left: 100%;
+}
 
-        .faq-question h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #ffffff;
-            margin: 0;
-            flex: 1;
-            padding-right: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-family: 'Fira Code', monospace;
-        }
+.faq-question h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    flex: 1;
+    padding-right: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Fira Code', monospace;
+}
 
-        .faq-question:hover h3 {
-            color: #ff6b9d;
-            text-shadow: 0 0 10px rgba(255, 107, 157, 0.5);
-        }
+.faq-question:hover h3 {
+    color: #ff6b9d;
+    text-shadow: 0 0 10px rgba(255, 107, 157, 0.5);
+}
 
-        .faq-item.active .faq-question h3 {
-            color: #ff6b9d;
-            text-shadow: 0 0 10px rgba(255, 107, 157, 0.5);
-        }
+.faq-item.active .faq-question h3 {
+    color: #ff6b9d;
+    text-shadow: 0 0 10px rgba(255, 107, 157, 0.5);
+}
 
-        .faq-icon {
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 107, 157, 0.2);
-            border: 2px solid rgba(255, 107, 157, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            font-size: 20px;
-            font-weight: bold;
-            color: #ff6b9d;
-            clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
-        }
+.faq-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 107, 157, 0.2);
+    border: 2px solid rgba(255, 107, 157, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6b9d;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
 
-        .faq-item.active .faq-icon {
-            transform: rotate(45deg);
-            background: rgba(255, 107, 157, 0.3);
-            border-color: #ff6b9d;
-            box-shadow: 0 0 15px rgba(255, 107, 157, 0.5);
-        }
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+    background: rgba(255, 107, 157, 0.3);
+    border-color: #ff6b9d;
+    box-shadow: 0 0 15px rgba(255, 107, 157, 0.5);
+}
 
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.3s ease;
-            background: rgba(13, 0, 26, 0.6);
-            backdrop-filter: blur(10px);
-        }
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    background: rgba(13, 0, 26, 0.6);
+    backdrop-filter: blur(10px);
+}
 
-        .faq-item.active .faq-answer {
-            max-height: 400px;
-            padding: 30px;
-        }
+.faq-item.active .faq-answer {
+    max-height: 400px;
+    padding: 30px;
+}
 
-        .faq-answer p {
-            color: #cccccc;
-            line-height: 1.8;
-            font-size: 1rem;
-            font-family: 'Fira Code', monospace;
-            margin: 0;
-        }
+.faq-answer p {
+    color: #cccccc;
+    line-height: 1.8;
+    font-size: 1rem;
+    font-family: 'Fira Code', monospace;
+    margin: 0;
+}
 
 
 .page-heading {
@@ -1044,49 +1038,52 @@ canvas {
 }
 
 /* Theme sections */
-        .theme-section {
-            margin-bottom: 4rem;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            padding: 2.5rem;
-            backdrop-filter: blur(20px);
-            opacity: 0;
-            animation: slideUp 0.008s ease-out forwards;
-        }
+.theme-section {
+    margin-bottom: 4rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 2.5rem;
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    animation: slideUp 0.008s ease-out forwards;
+}
 
 
-        .theme-title {
-            font-size: 1.8rem;
-            color: #40e0ff;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
+.theme-title {
+    font-size: 1.8rem;
+    color: #40e0ff;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
 
-        .theme-description {
-            color: #a0a0a0;
-            margin-bottom: 2rem;
-            font-size: 1rem;
-        }
+.theme-description {
+    color: #a0a0a0;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
 
-        .theme-events {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
+.theme-events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
 
-    
 
-    .social-links-contact {
+
+.social-links-contact {
     display: flex;
     gap: 12px;
     margin-top: 24px;
     align-items: center;
-    justify-content: center;       /* Center items horizontally within the flex container */
-    font-size: 1.5rem;  
+    justify-content: center;
+    /* Center items horizontally within the flex container */
+    font-size: 1.5rem;
 }
+
 .social-links-contact svg {
-    width: 100px;   /* or any size you prefer */
+    width: 100px;
+    /* or any size you prefer */
     height: 100px;
 }
 
