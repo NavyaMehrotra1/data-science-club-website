@@ -94,13 +94,7 @@ function createParticles() {
         }, 1500);
     });
 
-    // Add smooth scrolling for navigation links
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            // Smooth scroll logic would go here for actual sections
-        });
-    });
+    
 
     // Add form input animations
     document.querySelectorAll('.form-input, .form-select').forEach(input => {
