@@ -21,19 +21,19 @@ function createParticles() {
     }
 }
 
-// Continuously create particles
+// Continuously create particles (your existing code)
 setInterval(createParticles, 2000);
 createParticles(); // Initial particles
 
-// Form submission handling with JHU email validation
-document.getElementById('signupForm').addEventListener('submit', function (e) {
+// Form submission handling with JHU email validation and database connection
+document.getElementById('signupForm').addEventListener('submit', async function (e) {
     e.preventDefault();
 
     const statusMessage = document.getElementById('statusMessage');
     const submitBtn = document.querySelector('.submit-btn');
     const emailInput = document.querySelector('input[type="email"]');
 
-    // Validate JHU email
+    // Client-side JHU email validation
     if (!emailInput.value.endsWith('@jh.edu')) {
         statusMessage.textContent = 'Please use your JHU email address (@jh.edu)';
         statusMessage.className = 'status-message error';
@@ -44,56 +44,62 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
     const formData = new FormData(this);
     const data = Object.fromEntries(formData);
 
-    // Here you would send the data to your backend
-    // Example: fetch('/submit-form', { method: 'POST', body: formData })
-
-    // Simulate form processing
+    // Show processing state
     submitBtn.textContent = 'Processing...';
     submitBtn.disabled = true;
+    statusMessage.textContent = 'Submitting your application...';
+    statusMessage.className = 'status-message';
 
-    setTimeout(() => {
-        statusMessage.textContent = 'Welcome to JHU Data Science Club! You will receive a confirmation email shortly.';
-        statusMessage.className = 'status-message success';
+    try {
+        // Send data to backend
+        const response = await fetch('http://localhost:3000/api/submit-form', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        });
 
-        submitBtn.textContent = 'Application Submitted ✓';
-        submitBtn.style.background = 'linear-gradient(135deg, #c44569, #ff6b9d)';
+        const result = await response.json();
 
-        // Reset form
-        setTimeout(() => {
-            this.reset();
-            statusMessage.className = 'status-message';
-            statusMessage.textContent = '';
+        if (result.success) {
+            // Success state
+            statusMessage.textContent = result.message;
+            statusMessage.className = 'status-message success';
+
+            submitBtn.textContent = 'Application Submitted ✓';
+            submitBtn.style.background = 'linear-gradient(135deg, #c44569, #ff6b9d)';
+
+            // Reset form after delay
+            setTimeout(() => {
+                this.reset();
+                statusMessage.className = 'status-message';
+                statusMessage.textContent = '';
+                submitBtn.textContent = 'Deploy Application';
+                submitBtn.disabled = false;
+                submitBtn.style.background = 'linear-gradient(135deg, #ff6b9d, #c44569)';
+            }, 3000);
+
+        } else {
+            // Error from server
+            statusMessage.textContent = result.message;
+            statusMessage.className = 'status-message error';
+
+            // Reset button
             submitBtn.textContent = 'Deploy Application';
             submitBtn.disabled = false;
-            submitBtn.style.background = 'linear-gradient(135deg, #ff6b9d, #c44569)';
-        }, 3000);
-    }, 2000);
-});
-
-// Add typing effect to subtitle
-function typeWriter(element, text, speed = 50) {
-    let i = 0;
-    element.innerHTML = '';
-    element.style.opacity = '1';
-
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
         }
+
+    } catch (error) {
+        console.error('Network error:', error);
+        statusMessage.textContent = 'Network error. Please check your connection and try again.';
+        statusMessage.className = 'status-message error';
+
+        // Reset button
+        submitBtn.textContent = 'Deploy Application';
+        submitBtn.disabled = false;
     }
-    type();
-}
-
-// Initialize typing effect after page load
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        const subtitle = document.querySelector('.subtitle');
-        typeWriter(subtitle, '> Ready to dive into the world of data science?');
-    }, 1500);
 });
-
 
 
 // Add form input animations
