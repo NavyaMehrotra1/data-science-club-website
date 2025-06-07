@@ -46,7 +46,7 @@ app.post('/api/submit-form', async (req, res) => {
     try {
         const newSignup = new Signup({ name, email });
         await newSignup.save();
-        return res.json({ success: true, message: 'Thank you! Your application has been received.' });
+        return res.json({ success: true, message: 'Thank you! You have been added to our mailing list and will receive an email before our next meeting' });
     } catch (error) {
         console.error("❌ Error saving to MongoDB:", error);
         return res.json({ success: false, message: 'An error occurred. Please try again later.' });
