@@ -1,7 +1,10 @@
+require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors'); // <-- Required if frontend is on a different port
+const cors = require('cors'); 
 const app = express();
+
 
 // Middleware
 app.use(cors());             // Allow cross-origin requests
@@ -20,7 +23,8 @@ const signupSchema = new mongoose.Schema({
 const Signup = mongoose.model('Signup', signupSchema);
 
 // MongoDB connection
-const uri = "mongodb+srv://dataScienceClub:82aqI6DCkJxY1P1b@data-science-club.hdsyvrx.mongodb.net/?retryWrites=true&w=majority&appName=data-science-club";
+// MongoDB connection
+const uri = process.env.MONGODB_URI;
 
 async function connect() {
     try {
@@ -30,7 +34,6 @@ async function connect() {
         console.error("❌ Error connecting to MongoDB:", error);
     }
 }
-
 // API route to handle form submission
 app.post('/api/submit-form', async (req, res) => {
     const { name, email } = req.body;
