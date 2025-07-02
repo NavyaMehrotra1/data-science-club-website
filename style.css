@@ -981,3 +981,63 @@ canvas {
     color: white;
 }
 
+
+footer {
+            background: rgba(26, 0, 51, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 2px solid #ff6b9d;
+            width: 100%;
+            position: relative;
+            margin-top: auto;
+            box-shadow: 0 -2px 10px rgba(255, 107, 157, 0.2);
+        }
+
+        .footer-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Fira Code', monospace;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+        }
+
+        .footer-links a:hover {
+            color: #ff6b9d;
+            text-shadow: 0 0 5px rgba(255, 107, 157, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, #ff6b9d, #c44569);
+            transition: width 0.3s ease;
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+
