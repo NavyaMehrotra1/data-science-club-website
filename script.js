@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
     statusMessage.className = 'status-message';
 
     try {
-      // Send data to backend
-      const response = await fetch('http://localhost:3000/api/submit-form', {
+      // Send data to backend (works both locally and on Vercel)
+      const response = await fetch('/api/submit-form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

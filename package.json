@@ -1,30 +1,27 @@
 {
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.5.0",
-    "express": "^5.1.0",
-    "mongodb": "^6.17.0",
-    "mongoose": "^8.15.1"
+    "mongodb": "^6.17.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
   },
   "name": "data_science_club_website",
   "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
+  "description": "Data Science Club website for Johns Hopkins University",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "vercel dev",
+    "build": "echo \"Static site - no build needed\"",
+    "start": "echo \"Static site - use vercel dev for local development\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NavyaMehrotra1/data-science-club-website.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["data-science", "johns-hopkins", "student-club", "website"],
+  "author": "Data Science Club JHU",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/NavyaMehrotra1/data-science-club-website/issues"
   },
