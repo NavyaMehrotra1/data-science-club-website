@@ -1,235 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science Club | Johns Hopkins University</title>
-    <meta name="description" content="Data Science Club at Johns Hopkins University">
-    <link href="style.css" rel="stylesheet">
-    <script type="module" src="script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JHU Data Science Club</title>
+  <meta name="description" content="The JHU Data Science Club is a student-led, project-based club at Johns Hopkins. Workshops, themed projects, and data labs. Open to every Hopkins student.">
+  <meta name="theme-color" content="#080a0f">
+  <meta property="og:title" content="JHU Data Science Club">
+  <meta property="og:description" content="Student-led workshops, themed projects, and data labs at Johns Hopkins.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
-
 <body>
-    <!-- background -->
-    <div class="particles" id="particles"></div>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="index.html">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="8" cy="22" r="2.3" fill="#9dc0ff"/>
+          <circle cx="15" cy="13" r="2.3" fill="#e4b86a"/>
+          <circle cx="23" cy="18" r="2.3" fill="#9dc0ff"/>
+          <circle cx="25" cy="8" r="2.3" fill="#e4b86a"/>
+          <path d="M8 22 L15 13 L23 18" fill="none" stroke="#e8eef7" stroke-opacity="0.7" stroke-width="1.3"/>
+        </svg>
+        <span class="brand-name"><span class="brand-jhu">JHU</span> <span class="brand-full">Data Science Club</span><span class="brand-short">DSC</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#board">Board</a>
+        <a href="#partner">Partner</a>
+        <a class="nav-join" href="#join">Join</a>
+      </nav>
+    </div>
+  </header>
 
+  <main id="content">
+    <section class="hero wrap" id="top">
+      <div>
+        <p class="eyebrow">Johns Hopkins University</p>
+        <h1>Data Science<br>Club</h1>
+        <p class="lede">A student-led, project-based club for learning data science by building. Workshops, themed projects, and data labs, open to every Hopkins student.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://luma.com/32xhl7u7" target="_blank" rel="noopener noreferrer">RSVP for Build Night</a>
+          <a class="btn btn-ghost" href="#join">Join the list</a>
+        </div>
+        <a class="next-chip" href="#events">
+          <span class="tag-inline" data-event-state>Upcoming</span>
+          <strong>SpaceXAI x Data Science Club Build Night</strong>
+          <span>Wed, Oct 14, 2026, 8:00 to 9:00 PM ET</span>
+        </a>
+      </div>
+      <figure class="plot">
+        <div class="plot-top">
+          <span>Fig. 01</span>
+          <span>Illustrative scatter</span>
+        </div>
+        <ul class="legend">
+          <li><i class="swatch a" aria-hidden="true"></i>Series A</li>
+          <li><i class="swatch b" aria-hidden="true"></i>Series B</li>
+        </ul>
+        <div class="plot-frame">
+          <span class="axis axis-y">y</span>
+          <canvas id="scatter" aria-hidden="true"></canvas>
+          <span class="axis axis-x">x</span>
+        </div>
+        <figcaption class="plot-note">Decorative animation. These points are not club data.</figcaption>
+      </figure>
+    </section>
 
+    <section class="section" id="about">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="index">01 / Mission</p>
+          <h2>Learn the tools. Then build with them.</h2>
+          <p>The Data Science Club is JHU's student-led, project-based home for data science. Members learn relevant datasets, libraries, and machine learning methods, then apply them in team projects. Any Johns Hopkins student can join, from any major and any year. No prior experience is required.</p>
+        </header>
+        <ol class="pillars">
+          <li class="reveal">
+            <span class="num">01</span>
+            <h3>Data Science 101</h3>
+            <p>At the start of each semester, beginner-friendly workshops cover the basics of data science and machine learning, including practical skills such as Python, data analysis, and machine learning.</p>
+          </li>
+          <li class="reveal">
+            <span class="num">02</span>
+            <h3>Themed projects</h3>
+            <p>Each semester, members build around a theme. Themes include data science in medicine and data science in finance. A theme runs for about a month, and members can keep a project going after that. Project ideas include medical image classification, predicting disease risk, fraud detection, and stock price movement prediction.</p>
+          </li>
+          <li class="reveal">
+            <span class="num">03</span>
+            <h3>Workshops and data labs</h3>
+            <p>Kickoff workshops introduce the tools for a theme and help members choose projects and teams. Workshops are guided and include in-class exercises. Data labs are general body meetings where members collaborate on those projects.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-    <header>
-        <!-- Navigation Bar-->
-        <nav class="nav">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+    <section class="section" id="events">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="index">02 / Events</p>
+          <h2>Build Night is next.</h2>
+          <p>One event is confirmed. A regular meeting time and room are not posted yet.</p>
+        </header>
+        <div class="split">
+          <article class="ticket reveal">
+            <div class="ticket-date">
+              <span class="ticket-month">Oct</span>
+              <span class="ticket-day">14</span>
+              <span class="ticket-year">2026</span>
+            </div>
+            <div>
+              <p class="eyebrow" data-event-state>Upcoming</p>
+              <h3>SpaceXAI x Data Science Club Build Night</h3>
+              <ul class="meta">
+                <li>Wednesday, October 14, 2026</li>
+                <li>8:00 to 9:00 PM ET</li>
+              </ul>
+              <p class="placeholder"><strong class="tag">Placeholder</strong> Room and building are not listed for this event yet.</p>
+              <a class="btn btn-primary" href="https://luma.com/32xhl7u7" target="_blank" rel="noopener noreferrer">RSVP on Luma</a>
+            </div>
+          </article>
+          <div class="reveal">
+            <h3 class="form-title">How a semester runs</h3>
+            <ol class="steps" id="semester">
+              <li>
+                <h3>Data Science 101</h3>
+                <p>Beginner workshops before the themed work starts.</p>
+              </li>
+              <li>
+                <h3>Kickoff workshop</h3>
+                <p>Tools for the theme, then projects and teams. An example from the club is a Data Science in Medicine kickoff.</p>
+              </li>
+              <li>
+                <h3>Data labs</h3>
+                <p>General body meetings spent building the projects.</p>
+              </li>
+            </ol>
+            <p class="placeholder"><strong class="tag">Placeholder</strong> Regular meeting time and place are not confirmed yet.</p>
+            <p class="placeholder"><strong class="tag">Placeholder</strong> A dated list of past events is not on this site yet. Add titles, dates, and photos when you have them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="speakers">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="index">03 / Speakers</p>
+          <h2>People who have come to talk.</h2>
+        </header>
+        <div class="speaker-layout">
+          <article class="speaker-feature reveal">
+            <p class="eyebrow">Fall speakers</p>
+            <h3>Katalin Karikó</h3>
+            <p class="speaker-role">Nobel laureate</p>
+            <p>Fall speakers have included Nobel laureate Katalin Karikó.</p>
+            <p class="placeholder"><strong class="tag">Placeholder</strong> Add the talk title, date, and a photo.</p>
+          </article>
+          <div class="placeholder-stack reveal">
+            <article class="placeholder-card">
+              <strong class="tag">Placeholder</strong>
+              <h3>Speaker name</h3>
+              <p>Add affiliation and talk title.</p>
+            </article>
+            <article class="placeholder-card">
+              <strong class="tag">Placeholder</strong>
+              <h3>Speaker name</h3>
+              <p>Add affiliation and talk title.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="board">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="index">04 / Board</p>
+          <h2>The students who run the club.</h2>
+          <p>Navya Mehrotra is president. Vice president, secretary, and treasurer bios below are the ones published on the club site.</p>
+        </header>
+        <div class="board">
+          <article class="member reveal">
+            <img class="portrait" src="team_members/navya.jpeg" width="400" height="500" alt="Navya Mehrotra" decoding="async">
+            <p class="role">President</p>
+            <h3>Navya Mehrotra</h3>
+            <p>Navya is majoring in Computer Science and Economics and works at the intersection of machine learning and data analysis. She builds tools and models to uncover insights from complex datasets.</p>
+          </article>
+          <article class="member reveal">
+            <img class="portrait" src="team_members/Shreyasi.jpeg" width="400" height="500" alt="Shreyasi Poddar" loading="lazy" decoding="async">
+            <p class="role">Vice-President</p>
+            <h3>Shreyasi Poddar</h3>
+            <p>Shreyasi is a Computer Science major who is eager to collaborate on data science projects and has a passion for solving real-world problems through technology.</p>
+          </article>
+          <article class="member reveal">
+            <img class="portrait" src="team_members/Samaira.jpeg" width="400" height="500" alt="Samaira Khadka" loading="lazy" decoding="async">
+            <p class="role">Secretary</p>
+            <h3>Samaira Khadka</h3>
+            <p>Samaira is a computer science and applied mathematics and statistics major. She hopes to use data science in her future for medical applications and to make the world a better place.</p>
+          </article>
+          <article class="member reveal">
+            <img class="portrait" src="team_members/Anjali.jpeg" width="400" height="500" alt="Anjali Vinodh" loading="lazy" decoding="async">
+            <p class="role">Treasurer</p>
+            <h3>Anjali Vinodh</h3>
+            <p>Anjali is a biomedical engineering major who aspires to use data science and computational tools to screen and develop therapeutics.</p>
+          </article>
+        </div>
+        <p class="placeholder reveal lift"><strong class="tag">Placeholder</strong> LinkedIn profiles for board members are not linked yet.</p>
+      </div>
+    </section>
+
+    <section class="section" id="partner">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="index">05 / Sponsors</p>
+          <h2>Partner with the club.</h2>
+          <p>No sponsors are listed on this site yet. Students, Hopkins groups, and companies can reach the board at one address.</p>
+        </header>
+        <div class="logo-row reveal" aria-hidden="true">
+          <div class="logo-slot">Logo placeholder</div>
+          <div class="logo-slot">Logo placeholder</div>
+          <div class="logo-slot">Logo placeholder</div>
+        </div>
+        <p class="placeholder reveal"><strong class="tag">Placeholder</strong> Replace these marks with real sponsor logos after you have permission to show them.</p>
+        <div class="audience">
+          <article class="reveal">
+            <h3>Students</h3>
+            <p>Email the club with questions, and join the mailing list for a note before the next meeting.</p>
+            <p class="placeholder"><strong class="tag">Placeholder</strong> Instagram and LinkedIn URLs for the club are not on file yet.</p>
+          </article>
+          <article class="reveal">
+            <h3>Clubs and departments</h3>
+            <p>Interested in collaboration? The club partners with other student organizations and academic departments for workshops, competitions, and joint events.</p>
+            <p><a href="mailto:jhudatascienceclub@gmail.com">jhudatascienceclub@gmail.com</a></p>
+          </article>
+          <article class="reveal">
+            <h3>Industry sponsors</h3>
+            <p>Partner with the club to connect with JHU students. The club offers speaking opportunities, recruitment events, and brand visibility.</p>
+            <p><a href="mailto:jhudatascienceclub@gmail.com">jhudatascienceclub@gmail.com</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="join">
+      <div class="wrap join-grid">
+        <header class="section-head reveal">
+          <p class="index">06 / Join</p>
+          <h2>Get a note before the next meeting.</h2>
+          <p>Use your JHU email, the address ending in @jh.edu. Questions can also go straight to the club inbox.</p>
+          <p><a href="mailto:jhudatascienceclub@gmail.com">jhudatascienceclub@gmail.com</a></p>
+        </header>
+        <div class="form-card reveal">
+          <h3 class="form-title">Join the mailing list</h3>
+          <form id="signupForm">
+            <div class="form-group">
+              <label class="form-label" for="name">Full name</label>
+              <input class="form-input" id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="student@jh.edu" pattern=".+@jh\.edu" title="Use your JHU email ending in @jh.edu" required>
+            </div>
+            <button class="btn btn-primary submit-btn" type="submit">Join the list</button>
+            <p class="status-message" id="statusMessage" role="status" aria-live="polite"></p>
+          </form>
+          <p class="fine">If the form does not send, email <a href="mailto:jhudatascienceclub@gmail.com">jhudatascienceclub@gmail.com</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="index">07 / FAQ</p>
+          <h2>Questions members actually ask.</h2>
+        </header>
+        <div class="reveal">
+          <div class="faq-item">
+            <h3>
+              <button type="button" aria-expanded="false" aria-controls="faq-1" id="faq-q1">What will I do in the club? <span class="faq-icon" aria-hidden="true">+</span></button>
+            </h3>
+            <div class="faq-panel" id="faq-1" role="region" aria-labelledby="faq-q1" hidden>
+              <p>Members learn data science skills, including relevant datasets, libraries, and machine learning methods, and then apply them in projects. The semester starts with Data Science 101 workshops. Later, members work in teams on themed projects.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" aria-expanded="false" aria-controls="faq-2" id="faq-q2">Who can join? <span class="faq-icon" aria-hidden="true">+</span></button>
+            </h3>
+            <div class="faq-panel" id="faq-2" role="region" aria-labelledby="faq-q2" hidden>
+              <p>Any Johns Hopkins student with an interest in data science. All majors and years are welcome.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" aria-expanded="false" aria-controls="faq-3" id="faq-q3">Do I need experience? <span class="faq-icon" aria-hidden="true">+</span></button>
+            </h3>
+            <div class="faq-panel" id="faq-3" role="region" aria-labelledby="faq-q3" hidden>
+              <p>No prior experience is required. Essential skills are covered in Data Science 101. The club also hosts an introductory workshop before themed projects, such as a Data Science in Medicine kickoff workshop.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" aria-expanded="false" aria-controls="faq-4" id="faq-q4">What kind of projects? <span class="faq-icon" aria-hidden="true">+</span></button>
+            </h3>
+            <div class="faq-panel" id="faq-4" role="region" aria-labelledby="faq-q4" hidden>
+              <p>Data science and machine learning projects based on themes such as medicine or finance. The club spends about a month on each theme, and members can continue after that. Project ideas include medical image classification, predicting disease risk, fraud detection, and stock price movement prediction.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" aria-expanded="false" aria-controls="faq-5" id="faq-q5">What are themes, workshops, and data labs? <span class="faq-icon" aria-hidden="true">+</span></button>
+            </h3>
+            <div class="faq-panel" id="faq-5" role="region" aria-labelledby="faq-q5" hidden>
+              <p>Themes are broad areas, such as data science in medicine or finance. Workshops are guided sessions on tools, technologies, and programming languages, with in-class exercises. Data labs are general body meetings where members collaborate on projects.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3>
+              <button type="button" aria-expanded="false" aria-controls="faq-6" id="faq-q6">When and where does the club meet? <span class="faq-icon" aria-hidden="true">+</span></button>
+            </h3>
+            <div class="faq-panel" id="faq-6" role="region" aria-labelledby="faq-q6" hidden>
+              <p class="placeholder"><strong class="tag">Placeholder</strong> A regular meeting time and room have not been confirmed on this site yet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-name">JHU Data Science Club</p>
+          <p>Student-led data science at Johns Hopkins.</p>
+          <p><a href="mailto:jhudatascienceclub@gmail.com">jhudatascienceclub@gmail.com</a></p>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="#about">About</a>
+          <a href="#events">Events</a>
+          <a href="#speakers">Speakers</a>
+          <a href="#board">Board</a>
+          <a href="#partner">Partner</a>
+          <a href="#join">Join</a>
+          <a href="#faq">FAQ</a>
+          <a href="events.html">Events page</a>
+          <a href="team.html">Board page</a>
+          <a href="contact.html">Contact page</a>
         </nav>
-
-
-        <!-- Main Heading -->
-        <h1 class="main-heading">Data Science Club at Johns Hopkins University</h1>
-
-    </header>
-
-    <!-- About Section -->
-    <div class="container">
-        <div class="left-section">
-            <div class="card">
-                <h2 class="feature">What is the Data Science Club?</h2>
-                <p class="feature">The Data Science Club is JHU's premier student-led project based data science
-                    initiative to teach, explore and build with data.</p>
-            </div>
-            <br>
-            <div class="card">
-                <h2 class="feature">What do we do?</h2>
-                <p class="feature"> 🎯 Themed Projects: Every semster, we make projects about themes like Data Science in Medicine
-                    or Finance.</p>
-
-                <p class="feature">🚀 Kickoff Workshops: We start with workshops tailored to the theme to build relevant
-                    technical skills.</p>
-
-                <p class="feature">💡 Project-Based Learning: Members collaborate on hands-on projects applying what
-                    they’ve learned.</p>
-
-                <p class="feature">📚 Data Science 101: At the start of each semester, we offer beginner-friendly
-                    workshops for those new to data science.</p>
-            </div>
-        </div>
-        <div class="right-section">
-            <div class="form-container">
-                <h2 class="form-title">JOIN THE DATA SCIENCE CLUB</h2>
-                <form id="signupForm">
-                    <div class="form-group">
-                        <label class="form-label">Full Name</label>
-                        <input type="text" name = "name" class="form-input" placeholder="Enter your full name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Email</label>
-                        <input type="email" name="email" class="form-input" placeholder="student@jh.edu"
-                            pattern=".*jh\.edu" title="Please use your JHU email address" required>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Join Now!</button>
-                    <div class="status-message" id="statusMessage">
-                    </div>
-                </form>
-            </div>
-        </div>
+      </div>
+      <p class="legal">© 2026 Data Science Club, Johns Hopkins University. <a href="https://www.jhu.edu/" target="_blank" rel="noopener noreferrer">jhu.edu</a></p>
     </div>
-
-
-    <!-- Upcoming Events -->
-    <div class="carousel-container">
-        <h1 class="main-heading">Upcoming Events</h1>
-        <div class="carousel-track">
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="card-date">
-                            <div class="card-day">20</div>
-                            <div class="card-month">March</div>
-                        </div>
-
-                        <div class="card-info">
-                            <div class="card-time">5:00 PM – 6:00 PM</div>
-                            <div class="card-location">Malone Hall</div>
-                            <div class="card-description">Data Science 101: <br> Introduction to Python</div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-        <div class="carousel-item">
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-date">
-                        <div class="card-day">20</div>
-                        <div class="card-month">March</div>
-                    </div>
-
-                    <div class="card-info">
-                        <div class="card-time">5:00 PM – 6:00 PM</div>
-                        <div class="card-location">Malone Hall</div>
-                        <div class="card-description">Data Science 101:<br> Python Libraries</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="carousel-item">
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-date">
-                        <div class="card-day">20</div>
-                        <div class="card-month">March</div>
-                    </div>
-
-                    <div class="card-info">
-                        <div class="card-time">5:00 PM – 6:00 PM</div>
-                        <div class="card-location">Malone Hall</div>
-                        <div class="card-description">Introduction to <br>Machine Learning</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-    <!-- FAQs -->
-    <div class = "faq-container">
-        <div class = "main-heading">
-            <h1>Frequently Asked Questions</h1>
-        </div>
-        <div class = "faq-list" id = "faqlist">
-            <div class = "faq-item">
-                <div class = "faq-question">
-                    <h3>What will I do in the data science club?</h3>
-                    <div class="faq-icon">+</div>
-                </div>
-                <div class = "faq-answer">
-                    <p>All members of the data science club will learn data science related skills (relevant datasets, libraries, machine learning methods) and then apply them in projects. We start the semester with Data Science 101 workshops to teach the basics of data science and machine learning. Later in the semester, we work in teams on data science projects based on different themes. </p>
-                </div>
-
-            </div>
-            <div class = "faq-item">
-                <div class = "faq-question">
-                    <h3>When and where does the club meet?</h3>
-                    <div class="faq-icon">+</div>
-                </div>
-                <div class = "faq-answer">
-                    <p>To be answered</p>
-                </div>
-
-            </div>
-            <div class = "faq-item">
-                <div class = "faq-question">
-                    <h3>Who can join the Data Science Club?</h3>
-                    <div class="faq-icon">+</div>
-                </div>
-                <div class = "faq-answer">
-                    <p>Any Johns Hopkins student with an interest in data science can join! We welcome students from all majors and
-                        years.</p>
-                </div>
-
-            </div>
-
-            <div class = "faq-item">
-                <div class = "faq-question">
-                    <h3>What kind of projects will I work on?</h3>
-                    <div class="faq-icon">+</div>
-                </div>
-                <div class = "faq-answer">
-                    <p>The projects are data science and machine learning projects based on themes such as Data Science in Medicine or Finance. These can be worked on in groups and as a club, we will be working on each theme for one month (members are free to continue their projects later too!). Some project ideas include: medical image classification, predicting disease risk, fraud detection, stock price movement prediction etc. </p>
-                </div>
-            </div>
-            
-            <div class = "faq-item">
-                <div class = "faq-question">
-                    <h3>Do I need to have data science experience?</h3>
-                    <div class="faq-icon">+</div>
-                </div>
-                <div class = "faq-answer">
-                    <p>No prior experience required! We go through all essential skills in our data science 101 workshops. We will also host introductory workshops before we start working on themed projects (for example: Data Science in Medicine Kickoff Workshop). </p>
-                </div>
-            </div>
-            
-            <div class = "faq-item">
-                <div class = "faq-question">
-                    <h3>What are themes, workshops and data labs?</h3>
-                    <div class="faq-icon">+</div>
-                </div>
-                <div class = "faq-answer">
-                    <p><i>Themes</i> are broad areas in which we will explore data science applications (for example: data science in medicine, data science in finance etc.). <br><i>Workshops</i> are guided introductory sessions to understand tools, technologies and programming languages for data science. Workshops are interactive and include in-class exercises. <br><i>Data labs</i> are general body meetings (GBMs) in which club members collaborate on projects.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="events.html">Events</a>
-                <a href="team.html">Team</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div class="footer-text">
-                <p>&copy; 2024 Data Science Club - Johns Hopkins University</p>
-            </div>
-        </div>
-    </footer>
+  </footer>
+  <script src="script.js" defer></script>
 </body>
-
 </html>

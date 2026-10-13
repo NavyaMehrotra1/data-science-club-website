@@ -1,276 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events | Data Science Club | Johns Hopkins University</title>
-    <link href="style.css" rel="stylesheet">
-    <script type="module" src="script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | JHU Data Science Club</title>
+  <meta name="description" content="Upcoming JHU Data Science Club events, including the SpaceXAI Build Night on October 14, 2026.">
+  <meta name="theme-color" content="#080a0f">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
-
 <body>
-    <!-- background -->
-    <div class="particles" id="particles"></div>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="index.html">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="8" cy="22" r="2.3" fill="#9dc0ff"/>
+          <circle cx="15" cy="13" r="2.3" fill="#e4b86a"/>
+          <circle cx="23" cy="18" r="2.3" fill="#9dc0ff"/>
+          <circle cx="25" cy="8" r="2.3" fill="#e4b86a"/>
+          <path d="M8 22 L15 13 L23 18" fill="none" stroke="#e8eef7" stroke-opacity="0.7" stroke-width="1.3"/>
+        </svg>
+        <span class="brand-name"><span class="brand-jhu">JHU</span> <span class="brand-full">Data Science Club</span><span class="brand-short">DSC</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html#about">About</a>
+        <a href="events.html" aria-current="page">Events</a>
+        <a href="index.html#speakers">Speakers</a>
+        <a href="team.html">Board</a>
+        <a href="contact.html">Partner</a>
+        <a class="nav-join" href="index.html#join">Join</a>
+      </nav>
+    </div>
+  </header>
 
-    <header>
-        <!-- Navigation Bar-->
-        <nav class="nav">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html">Contact</a></li>
+  <aside class="banner">
+    <div class="wrap banner-inner">
+      <p><span class="tag-inline" data-event-state>Upcoming</span> SpaceXAI x Data Science Club Build Night, Wed, Oct 14, 2026, 8:00 to 9:00 PM ET</p>
+      <a class="btn btn-primary" href="https://luma.com/32xhl7u7" target="_blank" rel="noopener noreferrer">RSVP</a>
+    </div>
+  </aside>
+
+  <main id="content">
+    <section class="page-hero wrap">
+      <p class="eyebrow">Calendar</p>
+      <h1>Events</h1>
+      <p class="lede">What is confirmed, and how a semester is organized.</p>
+    </section>
+
+    <section class="section" id="events">
+      <div class="wrap split">
+        <article class="ticket reveal">
+          <div class="ticket-date">
+            <span class="ticket-month">Oct</span>
+            <span class="ticket-day">14</span>
+            <span class="ticket-year">2026</span>
+          </div>
+          <div>
+            <p class="eyebrow" data-event-state>Upcoming</p>
+            <h3>SpaceXAI x Data Science Club Build Night</h3>
+            <ul class="meta">
+              <li>Wednesday, October 14, 2026</li>
+              <li>8:00 to 9:00 PM ET</li>
             </ul>
+            <p class="placeholder"><strong class="tag">Placeholder</strong> Room and building are not listed for this event yet.</p>
+            <a class="btn btn-primary" href="https://luma.com/32xhl7u7" target="_blank" rel="noopener noreferrer">RSVP on Luma</a>
+          </div>
+        </article>
+        <div class="reveal">
+          <h2 class="form-title">How a semester runs</h2>
+          <ol class="steps">
+            <li>
+              <h3>Data Science 101</h3>
+              <p>Beginner workshops at the start of the semester. No prior experience is required.</p>
+            </li>
+            <li>
+              <h3>Kickoff workshop</h3>
+              <p>Tools for a theme such as medicine or finance, then projects and teams.</p>
+            </li>
+            <li>
+              <h3>Data labs</h3>
+              <p>General body meetings where members build the projects together.</p>
+            </li>
+          </ol>
+          <p class="placeholder"><strong class="tag">Placeholder</strong> Regular meeting time and place are not confirmed yet.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="index">Archive</p>
+          <h2>Past events</h2>
+        </header>
+        <p class="placeholder"><strong class="tag">Placeholder</strong> A dated list of past events is not on this site yet. Add titles, dates, and photos when you have them.</p>
+        <p><a href="index.html#join">Join the mailing list</a> for a note before the next meeting.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-name">JHU Data Science Club</p>
+          <p><a href="mailto:jhudatascienceclub@gmail.com">jhudatascienceclub@gmail.com</a></p>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="events.html">Events</a>
+          <a href="team.html">Board</a>
+          <a href="contact.html">Contact</a>
+          <a href="index.html#join">Join</a>
         </nav>
-
-
-        <!-- Main Heading -->
-        <h1 class="main-heading">Data Science Club at Johns Hopkins University</h1>
-
-    </header>
-
-    <main>
-        <div class="page">
-            <h1 class="page-heading">Events</h1>
-
-            <!-- Regular events time -->
-            <div class="regular-events">
-                <h2>Regular Events</h2>
-                <div class="card">
-                    <p class="card-info">(TBD) We meet every Tuesday at 5:00 PM in Malone Hall.</p>
-                </div>
-
-            </div>
-
-            <!-- Upcoming Events -->
-            <h2>Upcoming Events</h2>
-
-            <section class="theme-section">
-                <h3 class="theme-title">Data Science 101 Workshops</h3>
-                <p class="theme-description">Workshops</p>
-                <div class="theme-events">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-date">
-                                <div class="card-day">20</div>
-                                <div class="card-month">March</div>
-                            </div>
-
-                            <div class="card-info">
-                                <div class="card-time">5:00 PM – 6:00 PM</div>
-                                <div class="card-location">Malone Hall</div>
-                                <div class="card-description">Introduction to Python for Data Science (Part 1)</div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-date">
-                                <div class="card-day">20</div>
-                                <div class="card-month">March</div>
-                            </div>
-
-                            <div class="card-info">
-                                <div class="card-time">5:00 PM – 6:00 PM</div>
-                                <div class="card-location">Malone Hall</div>
-                                <div class="card-description">Introdcution to Python for Data Science (Part 2) -> including specific libraries such as Pandas, Numpy, Matplotlib</div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-date">
-                                <div class="card-day">20</div>
-                                <div class="card-month">March</div>
-                            </div>
-
-                            <div class="card-info">
-                                <div class="card-time">5:00 PM – 6:00 PM</div>
-                                <div class="card-location">Malone Hall</div>
-                                <div class="card-description">Data Science Club x HopAI <br> Machine Learning for Data Science</div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-date">
-                                <div class="card-day">20</div>
-                                <div class="card-month">March</div>
-                            </div>
-
-                            <div class="card-info">
-                                <div class="card-time">5:00 PM – 6:00 PM</div>
-                                <div class="card-location">Malone Hall</div>
-                                <div class="card-description">TBD Workshop</div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="theme-section">
-                <h3 class="theme-title">Theme 1: Data Science in Medicine</h3>
-                <p class="theme-description">Workshops</p>
-                <div class="theme-events">
-                    <div class="card">
-                        <div class="card-content">
-
-                            <div class="card-date">
-                                <div class="card-day">20</div>
-                                <div class="card-month">March</div>
-                            </div>
-
-                            <div class="card-info">
-                                <div class="card-time">5:00 PM – 6:00 PM</div>
-                                <div class="card-location">Malone Hall</div>
-                                <div class="card-description">Kickoff Workshop <br> (tools and technologies for data science in medicine + deciding projects & teams)</div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-date">
-                                <div class="card-day">20</div>
-                                <div class="card-month">March</div>
-                            </div>
-
-                            <div class="card-info">
-                                <div class="card-time">5:00 PM – 6:00 PM</div>
-                                <div class="card-location">Malone Hall</div>
-                                <div class="card-description">Data Lab (working on projects)</div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-date">
-                                <div class="card-day">20</div>
-                                <div class="card-month">March</div>
-                            </div>
-
-                            <div class="card-info">
-                                <div class="card-time">5:00 PM – 6:00 PM</div>
-                                <div class="card-location">Malone Hall</div>
-                                <div class="card-description">Data Lab (working on projects)</div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-date">
-                                <div class="card-day">20</div>
-                                <div class="card-month">March</div>
-                            </div>
-
-                            <div class="card-info">
-                                <div class="card-time">5:00 PM – 6:00 PM</div>
-                                <div class="card-location">Malone Hall</div>
-                                <div class="card-description">Data Lab (working on projects)</div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="theme-section">
-                <h3 class="theme-title">Theme 2: Data Science in Finance</h3>
-                <p class="theme-description">Workshops</p>
-                <div class="theme-events">
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-date">
-                                <div class="card-day">20</div>
-                                <div class="card-month">March</div>
-                            </div>
-
-                            <div class="card-info">
-                                <div class="card-time">5:00 PM – 6:00 PM</div>
-                                <div class="card-location">Malone Hall</div>
-                                <div class="card-description">Kickoff Workshop <br> (tools and technologies for data science in finance + deciding projects & teams)</div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-date">
-                                <div class="card-day">20</div>
-                                <div class="card-month">March</div>
-                            </div>
-
-                            <div class="card-info">
-                                <div class="card-time">5:00 PM – 6:00 PM</div>
-                                <div class="card-location">Malone Hall</div>
-                                <div class="card-description">Data Lab (working on projects)</div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-date">
-                                <div class="card-day">20</div>
-                                <div class="card-month">March</div>
-                            </div>
-
-                            <div class="card-info">
-                                <div class="card-time">5:00 PM – 6:00 PM</div>
-                                <div class="card-location">Malone Hall</div>
-                                <div class="card-description">Data Lab (working on projects)</div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="card-date">
-                                <div class="card-day">20</div>
-                                <div class="card-month">March</div>
-                            </div>
-
-                            <div class="card-info">
-                                <div class="card-time">5:00 PM – 6:00 PM</div>
-                                <div class="card-location">Malone Hall</div>
-                                <div class="card-description">Data Lab (working on projects)</div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-            <!-- Past Events -->
-            <h2>Past Events</h2>
-        </div>
-
-        <!-- Sign up for our mailing list to be notified-->
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="events.html">Events</a>
-                <a href="team.html">Team</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div class="footer-text">
-                <p>&copy; 2024 Data Science Club - Johns Hopkins University</p>
-            </div>
-        </div>
-    </footer>
-
+      </div>
+      <p class="legal">© 2026 Data Science Club, Johns Hopkins University.</p>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
 </body>
-
 </html>

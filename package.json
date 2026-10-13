@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vercel dev",
     "build": "echo \"Static site - no build needed\"",
-    "start": "echo \"Static site - use vercel dev for local development\""
+    "start": "node dev-server.js"
   },
   "repository": {
     "type": "git",

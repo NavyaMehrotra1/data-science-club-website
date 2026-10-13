@@ -1,119 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Data Science Club | Johns Hopkins University</title>
-    <link href="style.css" rel="stylesheet">
-    <script type="module" src="script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | JHU Data Science Club</title>
+  <meta name="description" content="Contact the JHU Data Science Club at jhudatascienceclub@gmail.com. Students, Hopkins groups, and sponsors are welcome.">
+  <meta name="theme-color" content="#080a0f">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
-
 <body>
-    <!-- background -->
-    <div class="particles" id="particles"></div>
-
-    <header>
-        <!-- Navigation Bar-->
-        <nav class="nav">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
-
-        <!-- Main Heading -->
-        <h1 class="main-heading">Data Science Club at Johns Hopkins University</h1>
-
-    </header>
-
-    <div class="page">
-        <div class="page-heading">
-            Contact Us
-        </div>
-        <div class="social-links-contact">
-            <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-            </a>
-            <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
-            </a>
-            <a href="mailto:jhudatascienceclub@gmail.com" aria-label="Email">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg>
-            </a>
-        </div>
-        <div class="carousel-container">
-
-            <div class="carousel-track">
-                <div class="carousel-item">
-                    <div class="card">
-                        <div class="card-content-contact">
-                            <div class="card-title">For Students:</div>
-                            <p>Email us with any questions and follow us on Instagram and Linkedin for updates.</p>
-                            <p>Join our mailing list by filling the form <a href = "index.html">here</a>!</p>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="card-content-contact">
-                        <div class="card-title">For JHU Clubs and Departments:</div>
-                        <p>Interested in collaboration? We partner with other student organizations and academic departments for workshops, competitions, and joint events.</p>
-                        <p>Email us at <a href = "mailto:jhudatascienceclub@gmail.com">jhudatascienceclub@gmail.com</a></p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="card">
-                    <div class="card-content-contact">
-                        <div class="card-title">For Industry Sponsors: </div>
-                        <p>Partner with us to connect with talented JHU students. We offer speaking opportunities, recruitment events, and brand visibility.
-
-</p>
-                        <p>Email us at <a href = "mailto:jhudatascienceclub@gmail.com">jhudatascienceclub@gmail.com</a></p>
-
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="index.html">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="8" cy="22" r="2.3" fill="#9dc0ff"/>
+          <circle cx="15" cy="13" r="2.3" fill="#e4b86a"/>
+          <circle cx="23" cy="18" r="2.3" fill="#9dc0ff"/>
+          <circle cx="25" cy="8" r="2.3" fill="#e4b86a"/>
+          <path d="M8 22 L15 13 L23 18" fill="none" stroke="#e8eef7" stroke-opacity="0.7" stroke-width="1.3"/>
+        </svg>
+        <span class="brand-name"><span class="brand-jhu">JHU</span> <span class="brand-full">Data Science Club</span><span class="brand-short">DSC</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html#about">About</a>
+        <a href="events.html">Events</a>
+        <a href="index.html#speakers">Speakers</a>
+        <a href="team.html">Board</a>
+        <a href="contact.html" aria-current="page">Partner</a>
+        <a class="nav-join" href="#join">Join</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="events.html">Events</a>
-                <a href="team.html">Team</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div class="footer-text">
-                <p>&copy; 2024 Data Science Club - Johns Hopkins University</p>
-            </div>
+  <main id="content">
+    <section class="page-hero wrap">
+      <p class="eyebrow">Contact</p>
+      <h1>Partner with the club.</h1>
+      <p class="lede">One inbox for students, Hopkins groups, and sponsors: <a href="mailto:jhudatascienceclub@gmail.com">jhudatascienceclub@gmail.com</a></p>
+    </section>
+
+    <section class="section" id="partner">
+      <div class="wrap">
+        <div class="audience">
+          <article class="reveal">
+            <h3>Students</h3>
+            <p>Email the club with questions, and join the mailing list for a note before the next meeting.</p>
+            <p class="placeholder"><strong class="tag">Placeholder</strong> Instagram and LinkedIn URLs for the club are not on file yet.</p>
+          </article>
+          <article class="reveal">
+            <h3>Clubs and departments</h3>
+            <p>Interested in collaboration? The club partners with other student organizations and academic departments for workshops, competitions, and joint events.</p>
+            <p><a href="mailto:jhudatascienceclub@gmail.com">jhudatascienceclub@gmail.com</a></p>
+          </article>
+          <article class="reveal">
+            <h3>Industry sponsors</h3>
+            <p>Partner with the club to connect with JHU students. The club offers speaking opportunities, recruitment events, and brand visibility.</p>
+            <p><a href="mailto:jhudatascienceclub@gmail.com">jhudatascienceclub@gmail.com</a></p>
+          </article>
         </div>
-    </footer>
-</body>
+        <div class="logo-row lift" aria-hidden="true">
+          <div class="logo-slot">Logo placeholder</div>
+          <div class="logo-slot">Logo placeholder</div>
+          <div class="logo-slot">Logo placeholder</div>
+        </div>
+        <p class="placeholder"><strong class="tag">Placeholder</strong> No sponsors are listed yet. Replace these marks with real logos after you have permission to show them.</p>
+      </div>
+    </section>
 
+    <section class="section" id="join">
+      <div class="wrap join-grid">
+        <header class="section-head">
+          <p class="index">Join</p>
+          <h2>Get a note before the next meeting.</h2>
+          <p>Use your JHU email, the address ending in @jh.edu.</p>
+        </header>
+        <div class="form-card">
+          <h3 class="form-title">Join the mailing list</h3>
+          <form id="signupForm">
+            <div class="form-group">
+              <label class="form-label" for="name">Full name</label>
+              <input class="form-input" id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-input" id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="student@jh.edu" pattern=".+@jh\.edu" title="Use your JHU email ending in @jh.edu" required>
+            </div>
+            <button class="btn btn-primary submit-btn" type="submit">Join the list</button>
+            <p class="status-message" id="statusMessage" role="status" aria-live="polite"></p>
+          </form>
+          <p class="fine">If the form does not send, email <a href="mailto:jhudatascienceclub@gmail.com">jhudatascienceclub@gmail.com</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-name">JHU Data Science Club</p>
+          <p><a href="mailto:jhudatascienceclub@gmail.com">jhudatascienceclub@gmail.com</a></p>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="events.html">Events</a>
+          <a href="team.html">Board</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <p class="legal">© 2026 Data Science Club, Johns Hopkins University.</p>
+    </div>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
 </html>
