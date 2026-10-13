@@ -7,17 +7,14 @@ The Data Science Club website is a modern, interactive web platform designed for
 
 ## Development Guidelines
 
-### Adding New Events
-1. Duplicate the `carousel-item` structure  
-2. Update the date values in `card-day` and `card-month`  
-3. Modify time, location, and description in respective `card-info` children  
-4. Ensure consistent styling with existing events  
+### Adding an event
+1. Update the ticket in `public/index.html` and `public/events.html`
+2. Keep the date, time, and RSVP link in both places
+3. If the room is unknown, leave the dashed Placeholder note instead of inventing a location
 
-### Updating FAQ Content
-1. Locate the appropriate `faq-item` container  
-2. Modify the `faq-question` heading text  
-3. Update the `faq-answer` paragraph content  
-*Note: Several FAQ items currently show "To be answered" placeholders*
+### Updating FAQ content
+1. Edit the matching `faq-item` in `public/index.html`
+2. Keep unknown answers inside a `placeholder` note
 
 ### Form Customization
 1. **Email Validation**: Modify the `pattern` attribute to change domain requirements  
@@ -32,7 +29,7 @@ The Data Science Club website is a modern, interactive web platform designed for
 - **Interactive Elements**: Animated particles, hover effects, and smooth transitions
 - **Form Submission**: Join the club through our signup form (with serverless backend)
 - **FAQ Section**: Expandable questions and answers
-- **Event Carousel**: Showcase upcoming events
+- **Events**: Upcoming session with an RSVP link, plus the semester format
 - **Team Profiles**: Meet the club leadership
 - **Vercel Ready**: Optimized for deployment on Vercel
 
@@ -77,12 +74,11 @@ The Data Science Club website is a modern, interactive web platform designed for
 
 ### Local Development
 ```bash
-# Install Vercel CLI if not already installed
-npm i -g vercel
-
-# Start local development server
-vercel dev
+npm install
+npm start
 ```
+
+`npm start` serves `public/` at http://localhost:3000 and routes `/api/submit-form` to the same handler Vercel uses. `npm run dev` still runs `vercel dev` when you want the Vercel runtime.
 
 ## Mobile Compatibility
 
@@ -96,16 +92,20 @@ The website is fully responsive and includes:
 ## Project Structure
 
 ```
-├── index.html          # Main homepage
-├── events.html         # Events page
-├── team.html          # Team page
-├── contact.html       # Contact page
-├── style.css          # Main stylesheet with responsive design
-├── script.js          # Frontend JavaScript
+├── public/
+│   ├── index.html     # Homepage
+│   ├── events.html    # Events
+│   ├── team.html      # Board
+│   ├── contact.html   # Partner and join
+│   ├── style.css
+│   ├── script.js
+│   └── team_members/
 ├── api/
-│   └── submit-form.js # Serverless function for form submission
-├── vercel.json        # Vercel configuration
-└── package.json       # Dependencies and scripts
+│   ├── submit-form.js # Signup handler
+│   └── health.js
+├── dev-server.js      # Local static server plus API
+├── vercel.json
+└── package.json
 ```
 
 ## Environment Variables
